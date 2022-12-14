@@ -1,9 +1,12 @@
 <section class="cart-show">
 
+<% if enhanced_cart.empty? %>
+  <p> <%= link_to "The cart is Empty!", :root %></p>
+  <% else %>
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +51,6 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
 </section>
