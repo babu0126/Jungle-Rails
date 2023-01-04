@@ -62,7 +62,10 @@
         </li>
         <li class="nav-item end-0">
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
-          My Cart (<%= cart.size %>) <% end %>
+          <span class='nav-cart'>
+          My Cart (<%= cart.size %>)
+          </span> 
+          <% end %>
         </li>
         <span class="nav-text">
           <% if current_user %>
