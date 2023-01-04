@@ -1,4 +1,5 @@
-class Product < ApplicationRecord
+class Product < ActiveRecord::Base
+
   monetize :price_cents, numericality: true
   mount_uploader :image, ProductImageUploader
 
@@ -8,4 +9,5 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :quantity, presence: true
   validates :category, presence: true
+
 end
